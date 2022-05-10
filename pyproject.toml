@@ -9,6 +9,7 @@ fastapi = {version="^0.77.1", extras=["all"]}
 python = "^3.10"
 
 [tool.poetry.dev-dependencies]
+black = "^22.3.0"
 pytest = "^7.1.2"
 
 [build-system]

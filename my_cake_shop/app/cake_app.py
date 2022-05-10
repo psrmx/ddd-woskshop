@@ -19,4 +19,7 @@ def add_cart_product():
     cart.add(sonny_product)
     cart.add(apple_pencil_product)
     cart.delete(apple_pencil_product)
-    return {"products": cart.products.__str__(), "deleted_products": cart.deleted_products}
+    return {
+        "products": cart.products.__str__(),
+        "deleted_products": cart.deleted_products,
+    }
