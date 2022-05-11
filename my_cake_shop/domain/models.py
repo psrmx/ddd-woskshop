@@ -1,10 +1,19 @@
 from collections import defaultdict
 from dataclasses import dataclass, field
 
+from moneyed import Currency, USD
+
+
+@dataclass(frozen=True)
+class Price:
+    amount: decimal
+    currency: Currency = field(default=USD)
+
 
 @dataclass(frozen=True)
 class Product:
     name: str
+    price: Price
 
 
 @dataclass
