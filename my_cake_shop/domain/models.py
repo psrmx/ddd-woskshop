@@ -46,6 +46,6 @@ class Cart:
         return self is other
 
 
-@dataclass()
+@dataclass
 class Order:
     products: list[Product] = field(default_factory=list)

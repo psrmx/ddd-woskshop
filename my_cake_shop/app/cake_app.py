@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from my_cake_shop.domain.models import Cart, Product, Price
 
+from my_cake_shop.domain.models import Cart, Product, Price
 
 app = FastAPI()
 
@@ -23,5 +23,5 @@ def add_cart_product():
     return {
         "products": cart.products.__str__(),
         "deleted_products": cart.deleted_products,
-        "order": my_order
+        "order": my_order,
     }

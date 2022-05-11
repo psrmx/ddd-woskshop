@@ -1,9 +1,12 @@
 from my_cake_shop.domain.models import Price, Product
 
-COMPETITOR_PRICES = {"Apple Pencil": Price(amount=1), "Sony Wireless headphone": Price(amount=1)}
+COMPETITOR_PRICES = {
+    "Apple Pencil": Price(amount=1),
+    "Sony Wireless headphone": Price(amount=1),
+}
 
 
-class CompetitorPrices:
+class PriceCalculator:
     competitor_prices: dict = COMPETITOR_PRICES
 
     def calculate_discounted_price(self, product: Product):
