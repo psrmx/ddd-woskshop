@@ -33,5 +33,5 @@ class Order:
             total_cost = total_cost.add(product.price)
             total_weight += product.weight
 
-        total_cost = total_cost.add(Price(amount=total_weight*0.1, currency=USD))
+        total_cost = total_cost.add(Price(amount=total_weight * 0.1, currency=USD))
         return total_cost

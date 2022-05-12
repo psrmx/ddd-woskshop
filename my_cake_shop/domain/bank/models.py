@@ -30,7 +30,9 @@ class Customer:
 
 def main():
     old_address = Address("Berlin")
-    customer = Customer(old_address, accounts=[Account(old_address), Account(old_address)])
+    customer = Customer(
+        old_address, accounts=[Account(old_address), Account(old_address)]
+    )
     print(customer)
 
     new_address = Address("Mannheim")
@@ -38,5 +40,5 @@ def main():
     print(customer)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -23,13 +23,13 @@ def add_cart_product():
     cart.delete(apple_pencil_product)
     cart_products = cart.checkout()
 
-    weights_of_products = dict([("Apple Pencil", 100), ("Sony Wireless headphone", 200)])
+    weights_of_products = dict(
+        [("Apple Pencil", 100), ("Sony Wireless headphone", 200)]
+    )
     order_products = [
-        OrderProduct(
-            product.name,
-            product.price,
-            weights_of_products[product.name]
-        ) for product in cart_products]
+        OrderProduct(product.name, product.price, weights_of_products[product.name])
+        for product in cart_products
+    ]
     my_order = Order(order_products)
     total_cost = my_order.calculate_total_cost()
 
@@ -37,5 +37,5 @@ def add_cart_product():
         "products": cart.products.__str__(),
         "deleted_products": cart.deleted_products,
         "order": my_order,
-        "total_cost": total_cost
+        "total_cost": total_cost,
     }
