@@ -36,16 +36,11 @@ class Cart:
     def checkout(self):
         self.is_checkout = True
 
-        order_products = []
+        flatten_products = []
         for product, quantity in self.products.items():
-            order_products.extend([product] * quantity)
+            flatten_products.extend([product] * quantity)
 
-        return Order(products=order_products)
+        return flatten_products
 
     def __eq__(self, other):
         return self is other
-
-
-@dataclass
-class Order:
-    products: list[Product] = field(default_factory=list)

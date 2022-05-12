@@ -1,4 +1,6 @@
+# PyCharm project settings
 .idea/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -56,17 +58,17 @@ cover/
 *.mo
 *.pot
 
-# Django stuff:
+# Django stuff
 *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
-# Flask stuff:
+# Flask stuff
 instance/
 .webassets-cache
 
-# Scrapy stuff:
+# Scrapy stuff
 .scrapy
 
 # Sphinx documentation

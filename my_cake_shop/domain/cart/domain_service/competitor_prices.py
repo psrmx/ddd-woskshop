@@ -1,4 +1,4 @@
-from my_cake_shop.domain.models import Price, Product
+from my_cake_shop.domain.cart.models import Price, Product
 
 COMPETITOR_PRICES = {
     "Apple Pencil": Price(amount=1),

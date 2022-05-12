@@ -1,6 +1,6 @@
 import pytest
 
-from my_cake_shop.domain.models import Cart, Product, Price, Order
+from my_cake_shop.domain.cart.models import Cart, Product, Price
 
 
 @pytest.fixture
@@ -60,7 +60,6 @@ def test_cart_deletes_specific_product_and_returns_deleted_products(my_filled_ca
 def test_cart_checkout(my_filled_cart):
     my_cart, apple_product, sonny_product = my_filled_cart
 
-    actual_order = my_cart.checkout()
+    flatten_products = my_cart.checkout()
 
-    assert isinstance(actual_order, Order)
-    assert len(actual_order.products) == 3
+    assert len(flatten_products) == 3
